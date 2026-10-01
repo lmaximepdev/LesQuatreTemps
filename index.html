@@ -67,52 +67,86 @@
                 <p>Chaque chambre offre une décoration raffinée et un accès direct au jardin aromatique.</p>
             </div>
 
-            <div class="cards-grid">
-                <!-- Suite 1 -->
-                <article class="card">
-                    <div class="card-image placeholder-img">
-                        <span>Chambre Nature Provence</span>
-                    </div>
-                    <div class="card-body">
-                        <h3>Suite Mer Provence</h3>
-                        <p>Une suite lumineuse aux tons doux avec lit King Size et terrasse privée sous la tonnelle.</p>
-                        <div class="card-footer">
-                            <span class="price">À partir de 130€ / nuit</span>
-                            <a href="#reservation" class="btn-link">Réserver &rarr;</a>
-                        </div>
-                    </div>
-                </article>
 
-                <!-- Suite 2 -->
-                <article class="card">
-                    <div class="card-image placeholder-img">
-                        <span>Chambre Mer Provence</span>
-                    </div>
-                    <div class="card-body">
-                        <h3>Suite Nature Provence</h3>
-                        <p>Ambiance bohème chic avec salle de bain en pierre de taille et vue panoramique sur les vignes.</p>
-                        <div class="card-footer">
-                            <span class="price">À partir de 145€ / nuit</span>
-                            <a href="#reservation" class="btn-link">Réserver &rarr;</a>
-                        </div>
-                    </div>
-                </article>
+<div class="cards-grid">
+   <!-- Suite 1 -->
+  <article class="card">
+    <div class="carousel-container">
+  <button type="button" class="arrow prev">&#10094;</button>
+  <button type="button" class="arrow next">&#10095;</button>
+  <div class="carousel">
+    <div class="carousel-track">
+      <img src="chambre1-1.jpg" alt="Chambre Mer Provence 1">
+      <img src="chambre1-2.jpg" alt="Chambre Mer Provence 2">
+      <img src="chambre1-3.jpg" alt="Chambre Mer Provence 3">
+    </div>
+  </div>
+ </div>
+    <div class="card-body">
+      <h3>Suite Mer Provence</h3>
+      <p>Une suite lumineuse aux tons doux avec lit King Size et terrasse privée sous la tonnelle.</p>
+      <p class="prices" style="margin: 10px 0; font-size: 0.9rem; color: #555;">
+        <strong>Jan – Juin :</strong> 110 € / nuit<br>
+        <strong>Juil – Déc :</strong> 130 € / nuit
+      </p>
+      <div class="card-footer">
+        <a href="#reservation" class="btn-link">Réserver &rarr;</a>
+      </div>
+    </div>
+  </article>
 
-                <!-- Suite 3 -->
-                <article class="card">
-                    <div class="card-image placeholder-img">
-                        <span>Gîte de la piscine</span>
-                    </div>
-                    <div class="card-body">
-                        <h3>Gîte de la piscine</h3>
-                        <p>Grande chambre familiale avec salon privé et baignoire îlot pour un séjour bien-être d'exception.</p>
-                        <div class="card-footer">
-                            <span class="price">À partir de 160€ / nuit</span>
-                            <a href="#reservation" class="btn-link">Réserver &rarr;</a>
-                        </div>
-                    </div>
-                </article>
-            </div>
+  <!-- Suite 2 -->
+  <article class="card">
+    <div class="carousel-container">
+  <button type="button" class="arrow prev">&#10094;</button>
+  <button type="button" class="arrow next">&#10095;</button>
+  <div class="carousel">
+    <div class="carousel-track">
+      <img src="chambre2-1.jpg" alt="Chambre Nature Provence 1">
+      <img src="chambre2-2.jpg" alt="Chambre Nature Provence 2">
+      <img src="chambre2-3.jpg" alt="Chambre Nature Provence 3">
+    </div>
+  </div>
+</div>
+    <div class="card-body">
+      <h3>Suite Nature Provence</h3>
+      <p>Ambiance bohème chic avec salle de bain en pierre de taille et vue panoramique sur les vignes.</p>
+      <p class="prices" style="margin: 10px 0; font-size: 0.9rem; color: #555;">
+        <strong>Jan – Juin :</strong> 125 € / nuit<br>
+        <strong>Juil – Déc :</strong> 145 € / nuit
+      </p>
+      <div class="card-footer">
+        <a href="#reservation" class="btn-link">Réserver &rarr;</a>
+      </div>
+    </div>
+  </article>
+
+  <!-- Suite 3 -->
+  <article class="card">
+    <div class="carousel-container">
+  <button type="button" class="arrow prev">&#10094;</button>
+  <button type="button" class="arrow next">&#10095;</button>
+  <div class="carousel">
+    <div class="carousel-track">
+      <img src="chambre3-1.jpg" alt="Gîte de la piscine 1">
+      <img src="chambre3-2.jpg" alt="Gîte de la piscine 2">
+      <img src="chambre3-3.jpg" alt="Gîte de la piscine 3">
+    </div>
+  </div>
+</div>
+    <div class="card-body">
+      <h3>Gîte de la piscine</h3>
+      <p>Grande chambre familiale avec salon privé et baignoire îlot pour un séjour bien-être d'exception.</p>
+      <p class="prices" style="margin: 10px 0; font-size: 0.9rem; color: #555;">
+        <strong>Jan – Juin :</strong> 140 € / nuit<br>
+        <strong>Juil – Déc :</strong> 160 € / nuit
+      </p>
+      <div class="card-footer">
+        <a href="#reservation" class="btn-link">Réserver &rarr;</a>
+      </div>
+    </div>
+  </article>
+</div>
         </div>
     </section>
 
@@ -223,7 +257,8 @@
             </div>
         </div>
     </footer>
-
+    
+<!-- SCRIPT FORM -->
 <script>
     const form = document.getElementById('reservation-form');
     
@@ -244,6 +279,70 @@
             alert("Une erreur est survenue lors de l'envoi. Veuillez réessayer.");
         }
     });
+</script>
+
+<!-- SCRIPT CAROUSSEL -->
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  document.querySelectorAll(".carousel-container").forEach((container) => {
+    const track = container.querySelector(".carousel-track");
+    const slides = Array.from(track.children);
+    if (slides.length === 0) return;
+
+    // Clones pour la boucle infinie
+    const firstClone = slides[0].cloneNode(true);
+    const lastClone = slides[slides.length - 1].cloneNode(true);
+
+    track.appendChild(firstClone);
+    track.prepend(lastClone);
+
+    const totalSlides = slides.length + 2;
+    let index = 1;
+    let isAnimating = false;
+
+    track.style.width = `${totalSlides * 100}%`;
+
+    const allSlides = track.querySelectorAll("img");
+    allSlides.forEach((img) => {
+      img.style.width = `${100 / totalSlides}%`;
+    });
+
+    // Position initiale sur la 1ère photo
+    track.style.transition = "none";
+    track.style.transform = `translateX(-${(100 / totalSlides) * index}%)`;
+
+    function move(direction) {
+      if (isAnimating) return;
+      isAnimating = true;
+
+      index += direction;
+      track.style.transition = "transform 0.4s ease-in-out";
+      track.style.transform = `translateX(-${(100 / totalSlides) * index}%)`;
+    }
+
+    track.addEventListener("transitionend", function () {
+      isAnimating = false;
+
+      // Réinitialisation instantanée pour la boucle infinie
+      if (index === 0) {
+        track.style.transition = "none";
+        index = totalSlides - 2;
+        track.style.transform = `translateX(-${(100 / totalSlides) * index}%)`;
+      } else if (index === totalSlides - 1) {
+        track.style.transition = "none";
+        index = 1;
+        track.style.transform = `translateX(-${(100 / totalSlides) * index}%)`;
+      }
+    });
+
+    // Attachement des clics sur les flèches
+    const prevBtn = container.querySelector(".arrow.prev");
+    const nextBtn = container.querySelector(".arrow.next");
+
+    if (prevBtn) prevBtn.addEventListener("click", () => move(-1));
+    if (nextBtn) nextBtn.addEventListener("click", () => move(1));
+  });
+});
 </script>
 
 </body>
