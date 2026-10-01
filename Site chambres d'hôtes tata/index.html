@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chambres d'hôtes
+    </title>
+    <!-- Favicon / Logo onglet -->
+    <!-- LOGO BALISE <link rel="icon" type="image/png" href="logo.png"> -->
+
+    <!-- Polices Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,400&family=Plus+Jakarta+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Fichier CSS externe -->
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+    <!-- Entête & Navigation -->
+    <header class="header">
+        <nav class="nav-container">
+            <a href="#" class="logo">
+                <!-- Optionnel: Remplacer par <img src="logo.png" alt="Logo"> si vous préférez une image -->
+                <span>Les Quatre Temps</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="#accueil">Accueil</a></li>
+                <li><a href="#chambres">Nos Chambres</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <a href="#reservation" class="btn btn-primary">Réserver</a>
+        </nav>
+    </header>
+
+    <!-- Section Héro (Bannière d'accueil) -->
+    <section id="accueil" class="hero">
+
+        <video autoplay loop muted playsinline class="hero-video">
+        <!-- Remplace 'video-provence.mp4' par le chemin vers ton fichier vidéo -->
+        <source src="videomaison.mp4" type="video/mp4">
+    </video>
+    
+    <!-- Filtre sombre pour garantir la lisibilité du texte -->
+    <div class="hero-overlay"></div>
+
+
+        <div class="hero-content">
+            <span class="badge">Sud de la France • Provence</span>
+            <h1>Chambres d'hôtes Nature & Bio</h1>
+            <p>Découvrez nos chambres d'hôtes de charme mêlant authenticité provençale et confort moderne.</p>
+            <div class="hero-buttons">
+                <a href="#chambres" class="btn btn-primary">Découvrir les chambres</a>
+                <a href="#contact" class="btn btn-secondary">Nous contacter</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Présentation des Chambres -->
+    <section id="chambres" class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Nos Chambres d'Hôtes</h2>
+                <p>Chaque chambre offre une décoration raffinée et un accès direct au jardin aromatique.</p>
+            </div>
+
+            <div class="cards-grid">
+                <!-- Suite 1 -->
+                <article class="card">
+                    <div class="card-image placeholder-img">
+                        <span>Chambre Nature Provence</span>
+                    </div>
+                    <div class="card-body">
+                        <h3>Suite Mer Provence</h3>
+                        <p>Une suite lumineuse aux tons doux avec lit King Size et terrasse privée sous la tonnelle.</p>
+                        <div class="card-footer">
+                            <span class="price">À partir de 130€ / nuit</span>
+                            <a href="#reservation" class="btn-link">Réserver &rarr;</a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Suite 2 -->
+                <article class="card">
+                    <div class="card-image placeholder-img">
+                        <span>Chambre Mer Provence</span>
+                    </div>
+                    <div class="card-body">
+                        <h3>Suite Nature Provence</h3>
+                        <p>Ambiance bohème chic avec salle de bain en pierre de taille et vue panoramique sur les vignes.</p>
+                        <div class="card-footer">
+                            <span class="price">À partir de 145€ / nuit</span>
+                            <a href="#reservation" class="btn-link">Réserver &rarr;</a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Suite 3 -->
+                <article class="card">
+                    <div class="card-image placeholder-img">
+                        <span>Gîte de la piscine</span>
+                    </div>
+                    <div class="card-body">
+                        <h3>Gîte de la piscine</h3>
+                        <p>Grande chambre familiale avec salon privé et baignoire îlot pour un séjour bien-être d'exception.</p>
+                        <div class="card-footer">
+                            <span class="price">À partir de 160€ / nuit</span>
+                            <a href="#reservation" class="btn-link">Réserver &rarr;</a>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Services / Expérience -->
+    <section id="services" class="section bg-light">
+        <div class="container">
+            <div class="section-header">
+                <h2>L'Expérience du Sud</h2>
+                <p>Des prestations pensées pour faire de votre séjour un moment inoubliable.</p>
+            </div>
+
+            <div class="features-grid">
+                <div class="feature-item">
+                    <div class="feature-icon">🏊‍♂️</div>
+                    <h3>Piscine chauffée</h3>
+                    <p>Bassin de nage entouré de transats et d'un jardin méditerranéen préservé.</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">🥖</div>
+                    <h3>Petit-déjeuner maison</h3>
+                    <p>Produits locaux, confitures artisanales et viennoiseries fraîches servies sous la treille.</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">🍷</div>
+                    <h3>Table d'Hôtes</h3>
+                    <p>Dîners gourmands sur réservation pour goûter aux saveurs ensoleillées de Provence.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Réservation / Formulaire de Contact -->
+<section id="reservation" class="section-white">
+    <div class="container">
+        <div class="section-header">
+            <h2>Demande de Réservation</h2>
+            <p>Remplissez le formulaire ci-dessous pour vérifier la disponibilité ou réserver votre séjour.</p>
+        </div>
+
+    <form id="reservation-form" action="https://formspree.io/f/mvkgnvzq" method="POST" class="reservation-form">
+
+         <!-- Redirection vers ta page personnalisée -->
+    <input type="hidden" name="_next" value="https://ton-domaine.com/merci.html">
+
+     <!-- Mail personnalisé -->
+<input type="hidden" name="_subject" value="Nouvelle réservation - Les Quatre Temps">
+    
+    <!-- ... le reste de mes champs (nom, email, etc.) ... -->
+
+            <div class="form-group-double">
+                <div class="form-group">
+                    <label for="nom">Nom & Prénom *</label>
+                    <input type="text" id="nom" name="client" required placeholder="Jean Dupont">
+                </div>
+                <div class="form-group">
+                    <label for="email">Votre e-mail *</label>
+                    <input type="email" id="email" name="email" required placeholder="jean.dupont@example.com">
+                </div>
+            </div>
+
+            <div class="form-group-double">
+                <div class="form-group">
+                    <label for="telephone">Téléphone</label>
+                    <input type="tel" id="telephone" name="telephone" placeholder="06 12 34 56 78">
+                </div>
+                <div class="form-group">
+                    <label for="chambre">Chambre souhaitée</label>
+                    <select id="chambre" name="chambre">
+                        <option value="Suite Lavande">Suite Lavande</option>
+                        <option value="Suite Cigale">Suite Cigale</option>
+                        <option value="Suite Les Oliviers">Suite Les Oliviers</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="form-group-double">
+                <div class="form-group">
+                    <label for="date-arrivee">Date d'arrivée</label>
+                    <input type="date" id="date-arrivee" name="date-arrivee" required>
+                </div>
+                <div class="form-group">
+                    <label for="date-depart">Date de départ</label>
+                    <input type="date" id="date-depart" name="date-depart" required>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="message">Votre message</label>
+                <textarea id="message" name="message" rows="5" placeholder="Précisez l'heure d'arrivée estimée ou toute autre demande..."></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-submit">Envoyer la demande</button>
+        </form>
+    </div>
+</section>
+
+    <!-- Pied de page -->
+    <footer id="contact" class="footer">
+        <div class="container footer-content">
+            <div class="footer-info">
+                <h3>Les Quatre Temps</h3>
+                <p>120 Rue de la Courtaude, 83140 Six-Fours</p>
+                <p>Téléphone : +33 (0)4 90 00 00 00</p>
+                <p>Email : contact@lemasdesoliviers.fr</p>
+            </div>
+            <div class="footer-copy">
+                <p>&copy; 2026 Les Quatre Temps. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+
+<script>
+    const form = document.getElementById('reservation-form');
+    
+    form.addEventListener('submit', async function(e) {
+        e.preventDefault();
+        const data = new FormData(form);
+        const response = await fetch(form.action, {
+            method: 'POST',
+            body: data,
+            headers: {
+                'Accept': 'application/json'
+            }
+        });
+        if (response.ok) {
+            // Redirection vers la page merci.html
+            window.location.href = 'merci.html';
+        } else {
+            alert("Une erreur est survenue lors de l'envoi. Veuillez réessayer.");
+        }
+    });
+</script>
+
+</body>
+</html>
