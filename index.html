@@ -40,7 +40,7 @@
     <!-- Section Héro (Bannière d'accueil) -->
     <section id="accueil" class="hero">
 
-        <video autoplay loop muted playsinline class="hero-video" poster="image-poster.jpg" class="video-background">
+        <video autoplay loop muted playsinline class="hero-video">
         <source src="videomaison.mp4" type="video/mp4">
     </video>
     
@@ -345,15 +345,6 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 </script>
 
-<script>
-const video = document.querySelector('.video-background');
-
-if (video) {
-  video.addEventListener('loadeddata', () => {
-    video.style.filter = 'none';
-  });
-}
-</script>
 
 </body>
 </html>
