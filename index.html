@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="favicon.png">
     <title>Chambres d'hôtes
     </title>
     <!-- Favicon / Logo onglet -->
@@ -39,8 +40,7 @@
     <!-- Section Héro (Bannière d'accueil) -->
     <section id="accueil" class="hero">
 
-        <video autoplay loop muted playsinline class="hero-video">
-        <!-- Remplace 'video-provence.mp4' par le chemin vers ton fichier vidéo -->
+        <video autoplay loop muted playsinline class="hero-video" poster="image-poster.jpg" class="video-background">
         <source src="videomaison.mp4" type="video/mp4">
     </video>
     
@@ -161,18 +161,18 @@
             <div class="features-grid">
                 <div class="feature-item">
                     <div class="feature-icon">🏊‍♂️</div>
-                    <h3>Piscine chauffée</h3>
+                    <h3>Piscine</h3>
                     <p>Bassin de nage entouré de transats et d'un jardin méditerranéen préservé.</p>
                 </div>
                 <div class="feature-item">
                     <div class="feature-icon">🥖</div>
-                    <h3>Petit-déjeuner maison</h3>
+                    <h3>Petit-déjeuner Bio</h3>
                     <p>Produits locaux, confitures artisanales et viennoiseries fraîches servies sous la treille.</p>
                 </div>
                 <div class="feature-item">
-                    <div class="feature-icon">🍷</div>
-                    <h3>Table d'Hôtes</h3>
-                    <p>Dîners gourmands sur réservation pour goûter aux saveurs ensoleillées de Provence.</p>
+                    <div class="feature-icon">🛀</div>
+                    <h3>Jacuzzi</h3>
+                    <p>Jacuzzi sur réservation pour un moment de détente aux odeurs de Provence</p>
                 </div>
             </div>
         </div>
@@ -343,6 +343,16 @@ document.addEventListener("DOMContentLoaded", function () {
     if (nextBtn) nextBtn.addEventListener("click", () => move(1));
   });
 });
+</script>
+
+<script>
+const video = document.querySelector('.video-background');
+
+if (video) {
+  video.addEventListener('loadeddata', () => {
+    video.style.filter = 'none';
+  });
+}
 </script>
 
 </body>

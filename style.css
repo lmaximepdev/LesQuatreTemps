@@ -510,6 +510,21 @@ ul {
     font-size: 0.85rem;
 }
 
+.video-background {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  /* Applique le flou sur le poster avant la lecture */
+  filter: blur(8px);
+  transition: filter 0.5s ease;
+}
+
+/* Retire le flou dès que la vidéo commence à tourner */
+.video-background:playing,
+.video-background[data-loaded="true"] {
+  filter: blur(0);
+}
+
 
 /* Responsive (mobiles/tablettes) */
 @media (max-width: 768px) {
