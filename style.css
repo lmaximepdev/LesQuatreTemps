@@ -143,6 +143,28 @@ ul {
     color: var(--primary);
 }
 
+/* Conteneur principal logo + titre */
+.brand-container {
+  display: flex;
+  align-items: center;
+  gap: 12px; /* Espace entre le logo et le texte */
+}
+
+/* Style de l'image du logo */
+.brand-logo {
+  width: 50px;        /* Ajuste la taille selon tes préférences */
+  height: 50px;
+  object-fit: contain;
+}
+
+/* Style du texte du titre */
+.brand-title {
+  font-family: 'Playfair Display', 'Georgia', serif;
+  font-size: 1.5rem;
+  color: #A07855;     /* Couleur dorée / terracotta de ton charte */
+  font-weight: 600;
+}
+
 /* ==========================================
    HERO SECTION
    ========================================== */
