@@ -152,8 +152,8 @@ ul {
 
 /* Style de l'image du logo */
 .brand-logo {
-  width: 50px;        /* Ajuste la taille selon tes préférences */
-  height: 50px;
+  width: 70px;        /* Ajuste la taille selon tes préférences */
+  height: 70px;
   object-fit: contain;
 }
 
@@ -185,28 +185,26 @@ ul {
 }
 
 /* La vidéo couvre tout l'espace */
-.hero-video {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    min-width: 100%;
-    min-height: 100%;
-    width: auto;
-    height: auto;
-    transform: translate(-50%, -50%);
-    object-fit: cover;
-    z-index: 1;
+.hero {
+  position: relative;
+  height: 80vh; /* Hauteur ajustée sur ordinateur */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: var(--white);
+  padding: 0 20px;
+  overflow: hidden;
 }
 
-/* Couche d'assombrissement sur la vidéo pour lire le texte facilement */
-.hero-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.40); /* Ajuste l'opacité au besoin (0.3 à 0.5) */
-    z-index: 2;
+.hero-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Remplit tout le conteneur sans déformer les proportions */
+  z-index: 1;
 }
 
 /* Le contenu passe au-dessus de la vidéo et du filtre */
@@ -395,15 +393,16 @@ ul {
 
 /* Grille des SERVICES */
 .features-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    gap: 40px;
-    text-align: center;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 60px;
+  text-align: center;
 }
 
 .feature-icon {
-    font-size: 2.8rem;
-    margin-bottom: 16px;
+  font-size: 2.2rem;
+  color: #A07855; /* La couleur dorée/terracotta de ta charte */
+  margin-bottom: 16px;
 }
 
 .feature-item h3 {
@@ -532,12 +531,181 @@ ul {
     font-size: 0.85rem;
 }
 
+/* --- LIGHTBOX (GALERIE PLEIN ÉCRAN) --- */
+.lightbox {
+  display: none;
+  position: fixed;
+  z-index: 2000;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8); /* Arrière-plan assombri */
+  backdrop-filter: blur(5px);
+  justify-content: center;
+  align-items: center;
+}
+
+.lightbox.active {
+  display: flex;
+}
+
+.lightbox-content {
+  max-width: 90%;
+  max-height: 85vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.lightbox-content img {
+  max-width: 100%;
+  max-height: 85vh;
+  object-fit: contain;
+  border-radius: 8px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+/* Boutons de fermeture et navigation */
+.lightbox-close {
+  position: absolute;
+  top: 20px;
+  right: 35px;
+  color: #fff;
+  font-size: 40px;
+  font-weight: bold;
+  cursor: pointer;
+  z-index: 2001;
+}
+
+.lightbox-prev,
+.lightbox-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+  border: none;
+  font-size: 30px;
+  padding: 16px;
+  cursor: pointer;
+  border-radius: 50%;
+  transition: background 0.3s;
+  text-shadow: 
+    -0.5px -0.5px 0 #000,  
+     0.5px -0.5px 0 #000,
+    -0.5px  0.5px 0 #000,
+     0.5px  0.5px 0 #000;
+}
+
+.lightbox-prev:hover,
+.lightbox-next:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.lightbox-prev { left: 20px; }
+.lightbox-next { right: 20px; }
+
+/* Responsive LIGHTBOX (mobiles/tablettes) */
+
+@media (max-width: 768px) {
+  .lightbox-prev { left: 10px; padding: 10px 14px; font-size: 20px; }
+  .lightbox-next { right: 10px; padding: 10px 14px; font-size: 20px; }
+  .lightbox-close { top: 15px; right: 20px; font-size: 32px; }
+}
+
 /* Responsive (mobiles/tablettes) */
 @media (max-width: 768px) {
     .nav-links {
         display: none; /* À remplacer idéalement par un menu burger */
     }
-    .hero h1 {
-        font-size: 2.4rem;
-    }
+
+
+/* Responsive Ajustement en-tête */
+  
+  /* Ajustement de la barre de navigation */
+  .nav-container {
+    padding: 14px 12px;
+  }
+
+  /* Ajustement du logo */
+  .brand-logo {
+    width: 50px;
+    height: 50px;
+  }
+
+  /* Espace entre logo et titre */
+  .brand-container {
+    gap: 8px;
+  }
+
+  /* Ajustement de la taille du titre */
+  .brand-title {
+    font-size: 1.15rem;
+    white-space: nowrap;
+  }
+
+  /* Ajustement UNIQUEMENT du bouton Réserver dans la barre de navigation */
+  .nav-container a.btn,
+  .nav-container button {
+    padding: 8px 16px;
+    font-size: 0.85rem;
+    /* Conserve la forme pilule originale tout en étant mieux proportionnée */
+    border-radius: 50px; 
+  }
+
+  /* ADAPTATION HERO MOBILE */
+  /* Réduit la hauteur de la section vidéo sur mobile */
+  .hero {
+    height: 60vh; /* Réduit le champ vertical pour mieux cadrer la vidéo */
+    padding: 20px 15px;
+  }
+
+  /* Adapte la taille du grand titre sur mobile */
+  .hero h1 {
+    font-size: 2.2rem;
+    margin: 12px 0;
+  }
+
+  /* Adapte la description */
+  .hero p {
+    font-size: 1rem;
+    margin-bottom: 20px;
+  }
+
+  /* Aligne ou empile proprement les boutons si l'écran est étroit */
+  .hero-buttons {
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+    max-width: 280px;
+    margin: 0 auto;
+  }
+
+  /* Assombrit un peu plus la vidéo sur mobile */
+  .hero-overlay {
+    background: rgba(0, 0, 0, 0.55); /* Augmente la couleur sombre (0.55 au lieu de 0.40) */
+  }
+
+  /* Halo sombre très doux uniquement derrière le texte (invisible mais très efficace) */
+  .hero-content {
+    background: radial-gradient(circle, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0) 80%);
+    padding: 20px 10px;
+  }
+
+  /* Typographie nette sans aucun contour artificiel */
+  .hero h1 {
+    font-size: 2.1rem;
+    color: #ffffff;
+    font-weight: 600;
+    margin-bottom: 16px;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3); /* Ombre portée très douce et naturelle */
+  }
+
+  .hero p {
+    font-size: 1rem;
+    color: #ffffff;
+    margin-bottom: 24px;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  }
 }
