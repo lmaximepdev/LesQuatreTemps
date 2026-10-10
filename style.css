@@ -654,7 +654,7 @@ ul {
   /* ADAPTATION HERO MOBILE */
   /* Réduit la hauteur de la section vidéo sur mobile */
   .hero {
-    height: 70vh; /* Réduit le champ vertical pour mieux cadrer la vidéo */
+    height: 65vh; /* Réduit le champ vertical pour mieux cadrer la vidéo */
     padding: 20px 15px;
   }
 
