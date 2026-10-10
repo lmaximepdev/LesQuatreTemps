@@ -58,6 +58,7 @@ ul {
     margin: 0 auto;
 }
 
+
 /* ==========================================
    BOUTONS
    ========================================== */
@@ -583,11 +584,11 @@ ul {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background: rgba(255, 255, 255, 0.1);
+  background: NONE;
   color: white;
   border: none;
-  font-size: 30px;
-  padding: 16px;
+  font-size: 25px;
+  padding: 15px;
   cursor: pointer;
   border-radius: 50%;
   transition: background 0.3s;
